@@ -14,7 +14,7 @@ permissions:
 jobs:
   contracts:
     name: Contracts
-    uses: TerraTerraDharitri/drt-sc-actions/.github/workflows/contracts.yml@eb65c5cae88d1d540f1603c0cabc428fbe9e0975
+    uses: TerraDharitri/drt-sc-actions/.github/workflows/contracts.yml@67a09c1737e95f0d85a200c38101b40aae9173c2
     with:
       rust-toolchain: 1.82
       path-to-sc-meta: framework/meta
