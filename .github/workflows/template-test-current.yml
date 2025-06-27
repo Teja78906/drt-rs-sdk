@@ -29,7 +29,7 @@ jobs:
         run: |
           cargo install wasm-opt
           cargo install --path framework/meta
-          sc-meta install drt-go-scenario --tag v3.0.0
+          sc-meta install drt-go-scenario --tag v0.0.2-4
 
           which wasm-opt
           which drt-go-scenario
