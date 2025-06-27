@@ -16,7 +16,7 @@ jobs:
     name: Contracts
     uses: TerraDharitri/drt-sc-actions/.github/workflows/contracts.yml@v0.1.19
     with:
-      rust-toolchain: 1.82
+      rust-toolchain: stable
       path-to-sc-meta: framework/meta
       drt-go-scenario-version: v0.0.2-4
       enable-interactor-tests: true
