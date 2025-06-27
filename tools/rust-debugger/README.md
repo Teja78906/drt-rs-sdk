@@ -14,7 +14,7 @@ The LLDB pretty-printer script allows you to view managed types such as `BigUint
 
 ### Installation
 
-First, download the [**Dharitri LLDB Pretty-Printer Script**](https://github.com/TerraDharitri/drt-rs-sdk/blob/main/tools/rust-debugger/pretty-printers/dharitri_sc_lldb_pretty_printers.py) to a known directory on your system.
+First, download the [**DharitrI LLDB Pretty-Printer Script**](https://github.com/TerraDharitri/drt-rs-sdk/blob/main/tools/rust-debugger/pretty-printers/dharitri_sc_lldb_pretty_printers.py) to a known directory on your system.
 
 Then, adjust the `lldb.launch.initCommands` entry in your Visual Studio Code settings to import the pretty-printer script:
 

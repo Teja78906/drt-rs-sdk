@@ -12,9 +12,9 @@ path = "first-contract"
 path = "second-contract"
 
 [dev-dependencies.dharitri-sc]
-version = "1.0.1"
+version = "1.17.2"
 path = "../../../../framework/base"
 
 [dev-dependencies.dharitri-sc-scenario]
-version = "1.0.1"
+version = "1.17.2"
 path = "../../../../framework/scenario"

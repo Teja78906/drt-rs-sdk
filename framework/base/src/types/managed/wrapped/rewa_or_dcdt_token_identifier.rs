@@ -331,7 +331,7 @@ impl<M: ManagedTypeApi> SCDisplay for RewaOrDcdtTokenIdentifier<M> {
     }
 }
 
-const REWA_REPRESENTATION_HEX: &[u8] = b"45474C44";
+const REWA_REPRESENTATION_HEX: &[u8] = b"52455741";
 
 impl<M: ManagedTypeApi> SCLowerHex for RewaOrDcdtTokenIdentifier<M> {
     fn fmt<F: FormatByteReceiver>(&self, f: &mut F) {

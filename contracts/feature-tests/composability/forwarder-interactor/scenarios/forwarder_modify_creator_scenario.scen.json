@@ -41,7 +41,7 @@
             "id": "",
             "tx": {
                 "from": "0x0139472eff6886771a982f3083da5d421f24c29181e63888228dc81ca60d69e1",
-                "to": "bech32:drt1yvesqqqqqqqqqqqqqqqqqqqqyvesqqqqqqqqqqqqqqqqqqqzlllsahl0pc",
+                "to": "bech32:drt1yvesqqqqqqqqqqqqqqqqqqqqqqqqyvesqqqqqqqqqqqqqqqzlllsd5j0s2",
                 "rewaValue": "50000000000000000",
                 "function": "registerDynamic",
                 "arguments": [
@@ -63,7 +63,7 @@
             "id": "",
             "tx": {
                 "from": "0x0139472eff6886771a982f3083da5d421f24c29181e63888228dc81ca60d69e1",
-                "to": "bech32:drt1yvesqqqqqqqqqqqqqqqqqqqqyvesqqqqqqqqqqqqqqqqqqqzlllsahl0pc",
+                "to": "bech32:drt1yvesqqqqqqqqqqqqqqqqqqqqqqqqyvesqqqqqqqqqqqqqqqzlllsd5j0s2",
                 "function": "setSpecialRole",
                 "arguments": [
                     "0x544553542d643363346535",
@@ -107,7 +107,7 @@
             "id": "",
             "tx": {
                 "from": "0x0139472eff6886771a982f3083da5d421f24c29181e63888228dc81ca60d69e1",
-                "to": "bech32:drt1yvesqqqqqqqqqqqqqqqqqqqqyvesqqqqqqqqqqqqqqqqqqqzlllsahl0pc",
+                "to": "bech32:drt1yvesqqqqqqqqqqqqqqqqqqqqqqqqyvesqqqqqqqqqqqqqqqzlllsd5j0s2",
                 "function": "setSpecialRole",
                 "arguments": [
                     "0x544553542d643363346535",

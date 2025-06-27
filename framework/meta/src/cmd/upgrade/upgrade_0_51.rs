@@ -21,7 +21,7 @@ fn v_0_51_replace_in_files(sc_crate_path: &Path) {
     replace_in_files(
         sc_crate_path,
         "*rs",
-        &[Query::substring(
+        &[Query::simple(
             "dharitri_sc_meta",
             "dharitri_sc_meta_lib",
         )][..],

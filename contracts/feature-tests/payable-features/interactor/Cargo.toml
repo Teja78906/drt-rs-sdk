@@ -16,7 +16,7 @@ path = "src/payable_interactor.rs"
 path = ".."
 
 [dependencies.dharitri-sc-snippets]
-version = "1.0.1"
+version = "1.17.2"
 path = "../../../../framework/snippets"
 
 [dependencies]

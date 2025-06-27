@@ -49,7 +49,7 @@ pub trait RewaDcdtSwap: dharitri_sc_modules::pause::PauseModule {
         self.send()
             .dcdt_local_burn(&wrapped_rewa_token_id, 0, &payment_amount);
 
-        // 1 wrapped REWA = 1 REWA, so we pay back the same amount
+        // 1 wrapped rEWA = 1 rEWA, so we pay back the same amount
         let caller = self.blockchain().get_caller();
         self.tx().to(&caller).rewa(&*payment_amount).transfer();
     }

@@ -2,7 +2,7 @@
 
 [![crates.io](https://img.shields.io/crates/v/dharitri-sc-meta.svg)](https://crates.io/crates/dharitri-sc-meta)
 
-This is the standalone tool for creating and managing Dharitri smart contract crates.
+This is the standalone tool for creating and managing DharitrI smart contract crates.
 
 ## Install
 

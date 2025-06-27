@@ -8,5 +8,5 @@ edition = "2021"
 path = "src/lib.rs"
 
 [dependencies.dharitri-sc]
-version = "1.0.1"
+version = "1.17.2"
 path = "../../../../../framework/base"

@@ -126,7 +126,7 @@ where
             .original_result()
     }
 
-    pub fn pay_fee_and_fund_dcdt<
+    pub fn pay_fee_and_fund<
         Arg0: ProxyArg<ManagedAddress<Env::Api>>,
         Arg1: ProxyArg<u64>,
     >(
@@ -135,22 +135,7 @@ where
         valability: Arg1,
     ) -> TxTypedCall<Env, From, To, (), Gas, ()> {
         self.wrapped_tx
-            .raw_call("payFeeAndFundDCDT")
-            .argument(&address)
-            .argument(&valability)
-            .original_result()
-    }
-
-    pub fn pay_fee_and_fund_rewa<
-        Arg0: ProxyArg<ManagedAddress<Env::Api>>,
-        Arg1: ProxyArg<u64>,
-    >(
-        self,
-        address: Arg0,
-        valability: Arg1,
-    ) -> TxTypedCall<Env, From, To, (), Gas, ()> {
-        self.wrapped_tx
-            .raw_call("payFeeAndFundREWA")
+            .raw_call("payFeeAndFund")
             .argument(&address)
             .argument(&valability)
             .original_result()
@@ -251,8 +236,7 @@ where
     Api: ManagedTypeApi,
 {
     pub depositor_address: ManagedAddress<Api>,
-    pub dcdt_funds: ManagedVec<Api, DcdtTokenPayment<Api>>,
-    pub rewa_funds: BigUint<Api>,
+    pub funds: ManagedVec<Api, RewaOrDcdtTokenPayment<Api>>,
     pub valability: u64,
     pub expiration_round: u64,
     pub fees: Fee<Api>,

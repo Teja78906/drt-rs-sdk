@@ -44,19 +44,19 @@ fn test_managed_byte_array() {
 
 #[test]
 fn test_managed_address() {
-    let addr = hex!("233300000000000000000000000000233300000000000000000000000002ffff");
+    let addr = hex!("233300000000000000000000000000000002333000000000000000000002ffff");
     let s = format!("{:?}", ManagedAddress::<StaticApi>::from(&addr));
-    assert_eq!("ManagedAddress { handle: -200, hex-value: \"233300000000000000000000000000233300000000000000000000000002ffff\" }", s);
+    assert_eq!("ManagedAddress { handle: -200, hex-value: \"233300000000000000000000000000000002333000000000000000000002ffff\" }", s);
 }
 
 #[test]
 fn test_managed_address_pretty() {
-    let addr = hex!("233300000000000000000000000000233300000000000000000000000002ffff");
+    let addr = hex!("233300000000000000000000000000000002333000000000000000000002ffff");
     let s = format!("{:#?}", ManagedAddress::<StaticApi>::from(&addr));
     assert_eq!(
         "ManagedAddress {
     handle: -200,
-    hex-value: \"233300000000000000000000000000233300000000000000000000000002ffff\",
+    hex-value: \"233300000000000000000000000000000002333000000000000000000002ffff\",
 }",
         s
     );

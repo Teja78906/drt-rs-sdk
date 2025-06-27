@@ -1,6 +1,6 @@
 [package]
 name = "dharitri-sdk"
-version = "1.0.1"
+version = "1.17.2"
 edition = "2021"
 
 authors = ["contact@dharitri.org"]
@@ -9,7 +9,7 @@ readme = "README.md"
 repository = "https://github.com/TerraDharitri/drt-rs-sdk"
 homepage = "https://dharitri.org/"
 documentation = "https://docs.dharitri.org/"
-description = "SDK for interacting with the Dharitri blockchain"
+description = "SDK for interacting with the DharitrI blockchain"
 categories = ["cryptography::cryptocurrencies", "api-bindings"]
 keywords = ["dharitri", "blockchain", "sdk", "api"]
 
@@ -37,5 +37,5 @@ ctr = "0.9.2"
 uuid = {version = "1.10.0", features = ["v4"]}
 
 [dependencies.dharitri-chain-core]
-version = "=1.0.1"
+version = "=1.17.2"
 path = "../../chain/core"

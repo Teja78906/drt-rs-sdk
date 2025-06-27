@@ -18,7 +18,7 @@ SC_WITH_ROLE_ADDRESS_HEX="0x$(drtpy wallet bech32 --decode ${SC_WITH_ROLE_ADDRES
 SC_DEST_ADDRESS_BECH32=
 SC_DEST_ADDRESS_HEX="0x$(drtpy wallet bech32 --decode ${SC_DEST_ADDRESS_BECH32})"
 
-DCDT_SYSTEM_SC_ADDRESS=drt1yvesqqqqqqqqqqqqqqqqqqqqyvesqqqqqqqqqqqqqqqqqqqzlllsahl0pc
+DCDT_SYSTEM_SC_ADDRESS=drt1yvesqqqqqqqqqqqqqqqqqqqqqqqqyvesqqqqqqqqqqqqqqqzlllsd5j0s2
 DCDT_TRANSFER_FUNC_NAME="DCDTTransfer"
 DCDT_MULTI_TRANSFER_FUNC_NAME="MultiDCDTNFTTransfer"
 TRANSFER_ROLE_NAME_HEX=0x444344545472616E73666572526F6C65

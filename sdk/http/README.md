@@ -1,8 +1,8 @@
-# Dharitri SDK for Rust
+# DharitrI SDK for Rust
 
 [![Crates.io](https://img.shields.io/crates/v/dharitri-sdk)](https://crates.io/crates/dharitri-sdk)
 
-General purpose collection of tools & SDKs to interact with the Dharitri blockchain from Rust projects.
+General purpose collection of tools & SDKs to interact with the DharitrI blockchain from Rust projects.
 
 ## Example
 

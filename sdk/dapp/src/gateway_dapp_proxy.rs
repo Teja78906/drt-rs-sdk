@@ -1,7 +1,7 @@
 use gloo_net::http::Request;
 use dharitri_sdk::gateway::{GatewayAsyncService, GatewayRequest, GatewayRequestType};
 
-/// Allows communication with the Dharitri gateway API.
+/// Allows communication with the DharitrI gateway API.
 #[derive(Clone, Debug)]
 pub struct GatewayDappProxy {
     pub(crate) proxy_url: String,

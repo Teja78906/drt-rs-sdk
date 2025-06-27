@@ -20,29 +20,16 @@ pub trait SignatureOperationsModule: storage::StorageModule + helpers::HelpersMo
             "withdrawal has not been available yet"
         );
 
-        let mut rewa_funds = deposit.rewa_funds;
-        let mut dcdt_funds = deposit.dcdt_funds;
+        let mut funds = deposit.funds;
 
-        if paid_fee_token.token_identifier == RewaOrDcdtTokenIdentifier::rewa() {
-            rewa_funds += paid_fee_token.amount;
-        } else {
-            let dcdt_fee_token = paid_fee_token.unwrap_dcdt();
-            let dcdt_fee =
-                DcdtTokenPayment::new(dcdt_fee_token.token_identifier, 0, dcdt_fee_token.amount);
-            dcdt_funds.push(dcdt_fee);
-        }
+        let fee =
+            RewaOrDcdtTokenPayment::new(paid_fee_token.token_identifier, 0, paid_fee_token.amount);
+        funds.push(fee);
 
-        if rewa_funds > 0 {
+        if !funds.is_empty() {
             self.tx()
                 .to(&deposit.depositor_address)
-                .rewa(&rewa_funds)
-                .transfer();
-        }
-
-        if !dcdt_funds.is_empty() {
-            self.tx()
-                .to(&deposit.depositor_address)
-                .payment(dcdt_funds)
+                .payment(funds)
                 .transfer();
         }
     }
@@ -61,7 +48,7 @@ pub trait SignatureOperationsModule: storage::StorageModule + helpers::HelpersMo
 
         let block_round = self.blockchain().get_block_round();
         let deposit = deposit_mapper.take();
-        let num_tokens_transfered = deposit.get_num_tokens();
+        let num_tokens_transfered = deposit.funds.len();
         let mut deposited_fee = deposit.fees.value;
 
         let fee_token = deposited_fee.token_identifier.clone();
@@ -74,16 +61,10 @@ pub trait SignatureOperationsModule: storage::StorageModule + helpers::HelpersMo
         self.collected_fees(&fee_token)
             .update(|collected_fees| *collected_fees += fee_cost);
 
-        if deposit.rewa_funds > 0 {
+        if !deposit.funds.is_empty() {
             self.tx()
                 .to(&caller_address)
-                .rewa(&deposit.rewa_funds)
-                .transfer();
-        }
-        if !deposit.dcdt_funds.is_empty() {
-            self.tx()
-                .to(&caller_address)
-                .payment(&deposit.dcdt_funds)
+                .payment(&deposit.funds)
                 .transfer();
         }
         if deposited_fee.amount > 0 {
@@ -109,12 +90,9 @@ pub trait SignatureOperationsModule: storage::StorageModule + helpers::HelpersMo
         let fee = self.fee(&fee_token).get();
 
         let mut current_deposit = self.deposit(&address).take();
-        let num_tokens = current_deposit.get_num_tokens();
+        let num_tokens = current_deposit.funds.len();
         new_deposit.update(|fwd_deposit| {
-            require!(
-                fwd_deposit.rewa_funds == BigUint::zero() && fwd_deposit.dcdt_funds.is_empty(),
-                "key already used"
-            );
+            require!(fwd_deposit.funds.is_empty(), "key already used");
             require!(
                 &fee * num_tokens as u64 <= fwd_deposit.fees.value.amount,
                 "cannot deposit funds without covering the fee cost first"
@@ -123,8 +101,7 @@ pub trait SignatureOperationsModule: storage::StorageModule + helpers::HelpersMo
             fwd_deposit.fees.num_token_to_transfer += num_tokens;
             fwd_deposit.valability = current_deposit.valability;
             fwd_deposit.expiration_round = self.get_expiration_round(current_deposit.valability);
-            fwd_deposit.dcdt_funds = current_deposit.dcdt_funds;
-            fwd_deposit.rewa_funds = current_deposit.rewa_funds;
+            fwd_deposit.funds = current_deposit.funds;
         });
 
         let forward_fee = &fee * num_tokens as u64;

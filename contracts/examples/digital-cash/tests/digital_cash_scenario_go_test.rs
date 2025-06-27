@@ -45,8 +45,12 @@ fn whitelist_blacklist_fee_token_go() {
 }
 
 #[test]
-fn pay_fee_and_fund_dcdt_go() {
-    world().run("scenarios/pay-fee-and-fund-dcdt.scen.json");
+fn pay_fee_and_fund_dcdt_single_go() {
+    world().run("scenarios/pay-fee-and-fund-dcdt-single.scen.json");
+}
+#[test]
+fn pay_fee_and_fund_dcdt_multiple_go() {
+    world().run("scenarios/pay-fee-and-fund-dcdt-multiple.scen.json");
 }
 
 #[test]

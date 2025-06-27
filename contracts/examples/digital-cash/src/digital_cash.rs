@@ -80,13 +80,10 @@ pub trait DigitalCash:
         require!(!deposit_mapper.is_empty(), NON_EXISTENT_KEY_ERR_MSG);
 
         let deposit = deposit_mapper.get();
-        if token.is_rewa() {
-            return deposit.rewa_funds;
-        }
 
-        for dcdt in deposit.dcdt_funds.into_iter() {
-            if dcdt.token_identifier == token && dcdt.token_nonce == nonce {
-                return dcdt.amount;
+        for fund in deposit.funds.into_iter() {
+            if fund.token_identifier == token && fund.token_nonce == nonce {
+                return fund.amount;
             }
         }
 

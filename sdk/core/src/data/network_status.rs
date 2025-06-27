@@ -3,6 +3,8 @@ use serde::{Deserialize, Serialize};
 // NetworkStatus holds the network status details of a specified shard
 #[derive(Debug, Default, Clone, Serialize, Deserialize, PartialEq, Eq)]
 pub struct NetworkStatus {
+    #[serde(rename = "drt_block_timestamp")]
+    pub current_block_timestamp: u64,
     #[serde(rename = "drt_current_round")]
     pub current_round: u64,
     #[serde(rename = "drt_epoch_number")]

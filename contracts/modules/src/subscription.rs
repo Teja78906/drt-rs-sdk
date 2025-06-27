@@ -2,9 +2,9 @@ dharitri_sc::imports!();
 dharitri_sc::derive_imports!();
 
 /// Standard smart contract module for managing a Subscription NFT.
-/// Adaptation of the EIP-5643 for Dharitri, more here https://eips.ethereum.org/EIPS/eip-5643  
+/// Adaptation of the EIP-5643 for DharitrI, more here https://eips.ethereum.org/EIPS/eip-5643  
 ///
-/// This standard is an extension of the Dharitri NFT standard.
+/// This standard is an extension of the DharitrI NFT standard.
 /// It proposes an additional interface for NFTs to be used as recurring, expirable subscriptions.
 /// The interface includes functions to renew and cancel the subscription.
 ///

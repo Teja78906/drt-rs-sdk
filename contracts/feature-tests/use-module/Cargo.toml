@@ -9,17 +9,17 @@ publish = false
 path = "src/use_module.rs"
 
 [dependencies.dharitri-sc-modules]
-version = "1.0.1"
+version = "1.17.2"
 path = "../../../contracts/modules"
 
 [dependencies.dharitri-sc]
-version = "1.0.1"
+version = "1.17.2"
 path = "../../../framework/base"
 
 [dev-dependencies.dharitri-sc-scenario]
-version = "1.0.1"
+version = "1.17.2"
 path = "../../../framework/scenario"
 
 [dev-dependencies.dharitri-sc-meta-lib]
-version = "1.0.1"
+version = "1.17.2"
 path = "../../../framework/meta-lib"

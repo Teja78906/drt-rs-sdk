@@ -22,7 +22,7 @@
                     "nonce": "0",
                     "balance": "0"
                 },
-                "0x233300000000000000000000000000233300000000000000000000000002ffff": {
+                "0x233300000000000000000000000000000002333000000000000000000002ffff": {
                     "nonce": "0",
                     "balance": "0",
                     "code": "drtsc:../../dcdt-system-sc-mock/output/dcdt-system-sc-mock.drtsc.json"

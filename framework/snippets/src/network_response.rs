@@ -21,7 +21,6 @@ pub fn parse_tx_response(tx: TransactionOnNetwork, return_code: ReturnCode) -> T
             ..Default::default()
         };
     }
-
     process_success(&tx)
 }
 
@@ -30,7 +29,6 @@ fn process_signal_error(tx: &TransactionOnNetwork, return_code: ReturnCode) -> T
         let topics = event.topics.as_ref();
 
         let error = topics.unwrap().first().unwrap();
-        
         return TxResponseStatus::new(return_code, error);
     }
 
@@ -52,7 +50,6 @@ fn process_success(tx: &TransactionOnNetwork) -> TxResponse {
 fn process_tx_hash(tx: &TransactionOnNetwork) -> Option<H256> {
     tx.hash.as_ref().map(|encoded_hash| {
         let decoded = hex::decode(encoded_hash).expect("error decoding tx hash from hex");
-        
         assert_eq!(decoded.len(), 32);
         H256::from_slice(&decoded)
     })
@@ -156,7 +153,7 @@ fn process_new_issued_token_identifier(tx: &TransactionOnNetwork) -> Option<Stri
         if scr.sender.0 != DCDTSystemSCAddress.to_address() {
             continue;
         }
-
+        
         let prev_tx_data: &str = if let Some(prev_tx) = tx
             .smart_contract_results
             .iter()

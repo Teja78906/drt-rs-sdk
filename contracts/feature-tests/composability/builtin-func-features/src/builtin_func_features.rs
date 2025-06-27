@@ -2,11 +2,19 @@
 
 dharitri_sc::imports!();
 
+pub mod builtin_func_features_proxy;
+pub mod dcdt_features;
+
 /// Test contract for investigating async calls.
 #[dharitri_sc::contract]
-pub trait BuiltinFuncFeatures {
+pub trait BuiltinFuncFeatures: dcdt_features::DcdtFeaturesModule {
     #[init]
-    fn init(&self) {}
+    fn init(&self, fungible_token_id: TokenIdentifier, non_fungible_token_id: TokenIdentifier) {
+        self.fungible_dcdt_token_id()
+            .set_token_id(fungible_token_id);
+        self.non_fungible_dcdt_token_id()
+            .set_token_id(non_fungible_token_id);
+    }
 
     #[endpoint]
     fn call_set_user_name(&self, address: ManagedAddress, name: ManagedBuffer) {

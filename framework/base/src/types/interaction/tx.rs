@@ -57,7 +57,7 @@ where
     Data: TxDataFunctionCall<Env>,
     RH: TxResultHandler<Env>,
 {
-    /// Converts object to a Dharitri transaction data field string.
+    /// Converts object to a DharitrI transaction data field string.
     pub fn to_call_data_string(&self) -> ManagedBuffer<Env::Api> {
         self.data.to_call_data_string()
     }

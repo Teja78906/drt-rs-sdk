@@ -13,7 +13,7 @@ dharitri_sc::derive_imports!();
 
 // Additionally, we also have to update the interactor snippets manually to add relative paths:
 // [dependencies.dharitri-sc-snippets]
-// version = "0.0.1"
+// version = "1.17.2"
 // path = "../../../../framework/snippets"
 
 #[type_abi]

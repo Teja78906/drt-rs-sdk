@@ -9,15 +9,15 @@ publish = false
 path = "src/multisig.rs"
 
 [dependencies.dharitri-sc]
-version = "1.0.1"
+version = "1.17.2"
 path = "../../../framework/base"
 
 [dependencies.dharitri-sc-modules]
-version = "1.0.1"
+version = "1.17.2"
 path = "../../../contracts/modules"
 
 [dev-dependencies.dharitri-sc-scenario]
-version = "1.0.1"
+version = "1.17.2"
 path = "../../../framework/scenario"
 
 [dev-dependencies.adder]
@@ -27,11 +27,10 @@ path = "../adder"
 path = "../factorial"
 
 [dev-dependencies.dharitri-sc-wrewa-swap]
-version = "1.0.1"
+version = "1.17.2"
 path = "../../core/wrewa-swap"
 
 [dev-dependencies]
 num-bigint = "0.4"
 num-traits = "0.2"
 hex = "0.4"
-

@@ -464,7 +464,7 @@ where
         // prepare key
         A::managed_type_impl().mb_overwrite(
             temp_handle_1.clone(),
-            storage::protected_keys::NUMBAT_REWARD_KEY,
+            storage::protected_keys::NUMABT_REWARD_KEY,
         );
 
         // load value

@@ -25,7 +25,7 @@
                     "nonce": "0",
                     "balance": "100",
                     "storage": {
-                        "str:NUMBATreward": "100"
+                        "str:NUMABTreward": "100"
                     },
                     "code": ""
                 }
@@ -46,7 +46,7 @@
                     "nonce": "0",
                     "balance": "150",
                     "storage": {
-                        "str:NUMBATreward": "150"
+                        "str:NUMABTreward": "150"
                     },
                     "code": ""
                 }

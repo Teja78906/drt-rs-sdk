@@ -84,10 +84,10 @@ fn v_0_39_replace_in_files(sc_crate_path: &Path) {
         sc_crate_path,
         "*Cargo.toml",
         &[
-            Query::substring("numbat-wasm-debug", "dharitri-sc-scenario"),
-            Query::substring("numbat-wasm-modules", "dharitri-sc-modules"),
-            Query::substring("numbat-wasm-node", "dharitri-sc-wasm-adapter"),
-            Query::substring("numbat-wasm", "dharitri-sc"),
+            Query::simple("numbat-wasm-debug", "dharitri-sc-scenario"),
+            Query::simple("numbat-wasm-modules", "dharitri-sc-modules"),
+            Query::simple("numbat-wasm-node", "dharitri-sc-wasm-adapter"),
+            Query::simple("numbat-wasm", "dharitri-sc"),
         ][..],
     );
 
@@ -95,27 +95,27 @@ fn v_0_39_replace_in_files(sc_crate_path: &Path) {
         sc_crate_path,
         "*rs",
         &[
-            Query::substring("numbat_codec", "codec"),
-            Query::substring(
+            Query::simple("numbat_codec", "codec"),
+            Query::simple(
                 "numbat_wasm_debug::meta::perform",
                 "dharitri_sc_meta::cli_main",
             ),
-            Query::substring(
+            Query::simple(
                 "numbat_wasm_debug::denali_go",
                 "dharitri_sc_scenario::run_go",
             ),
-            Query::substring(
+            Query::simple(
                 "numbat_wasm_debug::denali_rs",
                 "dharitri_sc_scenario::run_rs",
             ),
-            Query::substring("numbat_wasm_debug", "dharitri_sc_scenario"),
-            Query::substring("numbat_wasm_modules", "dharitri_sc_modules"),
-            Query::substring("numbat_wasm_node", "dharitri_sc_wasm_adapter"),
-            Query::substring("numbat_wasm", "dharitri_sc"),
-            Query::substring("BlockchainMock", "ScenarioWorld"),
-            Query::substring("testing_framework", "whitebox"),
-            Query::substring("tx_mock", "whitebox"),
-            Query::substring("register_contract_builder", "register_contract"),
+            Query::simple("numbat_wasm_debug", "dharitri_sc_scenario"),
+            Query::simple("numbat_wasm_modules", "dharitri_sc_modules"),
+            Query::simple("numbat_wasm_node", "dharitri_sc_wasm_adapter"),
+            Query::simple("numbat_wasm", "dharitri_sc"),
+            Query::simple("BlockchainMock", "ScenarioWorld"),
+            Query::simple("testing_framework", "whitebox"),
+            Query::simple("tx_mock", "whitebox"),
+            Query::simple("register_contract_builder", "register_contract"),
         ][..],
     );
 }

@@ -1,16 +1,16 @@
-# The Dharitri Rust Tool Set
+# The DharitrI Rust Tool Set
 
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/dharitri/drt-rs-sdk/actions.yml?branch=master)](https://github.com/TerraDharitri/drt-rs-sdk/actions/workflows/actions.yml?query=branch%3Amaster) [![Dependency Status](https://deps.rs/repo/github/dharitri/drt-rs-sdk/status.svg)](https://deps.rs/repo/github/dharitri/drt-rs-sdk) [![Contributors](https://img.shields.io/github/contributors/dharitri/drt-rs-sdk)](https://github.com/TerraDharitri/drt-rs-sdk/graphs/contributors)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/TerraDharitri/drt-rs-sdk/actions.yml?branch=main)](https://github.com/TerraDharitri/drt-rs-sdk/actions/workflows/actions.yml?query=branch%3Amain) [![Dependency Status](https://deps.rs/repo/github/TerraDharitri/drt-rs-sdk/status.svg)](https://deps.rs/repo/github/TerraDharitri/drt-rs-sdk) [![Contributors](https://img.shields.io/github/contributors/TerraDharitri/drt-rs-sdk)](https://github.com/TerraDharitri/drt-rs-sdk/graphs/contributors)
 
 This repository contains a wide variety of tools, aimed primarily at smart contract developers.
 
 The repo contains:
-- The most complete smart contract framework on Dharitri:
+- The most complete smart contract framework on DharitrI:
     - The base framework;
     - A complete build system, which relies on the smart contract code directly;
-    - A powerful debugger, based on a partial implementation of the Dharitri VM, in Rust.
-    - A framework for writing both black-box and white-box tests. They rely on the standard Dharitri blockchain scenario format.
+    - A powerful debugger, based on a partial implementation of the DharitrI VM, in Rust.
+    - A framework for writing both black-box and white-box tests. They rely on the standard DharitrI blockchain scenario format.
     - The official data serializer and deserializer for smart contract data. Can be used both on- and off-chain.
 - A large collection of smart contract examples and feature tests, together with some of the core smart contracts used on the blockchain (e.g. the wrapped rewa swap, multisig, etc.).
 - A framework for interacting with the blockchain, based on the smart contract logic, especially suitable for developers.

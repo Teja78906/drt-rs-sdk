@@ -8,7 +8,7 @@ use std::time::Duration;
 
 use dharitri_sdk::gateway::{GatewayAsyncService, GatewayRequest};
 
-/// Allows communication with the Dharitri gateway API.
+/// Allows communication with the DharitrI gateway API.
 #[derive(Clone, Debug)]
 pub struct GatewayHttpProxy {
     pub(crate) proxy_uri: String,

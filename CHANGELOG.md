@@ -32,8 +32,23 @@ They are:
 	- `dharitri-sdk-http`
 	- `dharitri-sdk-dapp`
 
+## [sc 1.17.2, chain 1.17.2, sdk 1.17.2] - 2025-02-06
+- Allow setting gas for callback for direct transfers.
+- NestedEncode for interaction types: TestAddress, TestScAddress and TestTokenIdentifier.
+- Bugfix: pretty representation for ManagedAddress when debugging.
+- Upgrade dependency: ruplacer.
 
-## [sc 0.0.1, codec 0.0.1, chain 0.12.0, sdk 0.0.1] - 2025-01-15
+## [sc 0.56.0, chain 0.13.0, sdk 0.8.1] - 2025-01-23
+- Rust VM support for readonly sync calls.
+- `ManagedMapEncoded`, a map type that can use any key or value types that are serializable.
+- `ManagedDecimal` implements `ManagedVecItem`.
+- Bugfixes, improvements:
+	- Fixed a bug regarding the DCDT roles VM hook;
+	- Pretty representation for ManagedBuffer and other string-like types when debugging;
+	- API fix of an issue that was preventing set state in chain simulator;
+	- Snippets generator fixes involving the crate path and the upgrade result handler.
+
+## [sc 0.55.0, codec 1.17.2, chain 0.12.0, sdk 0.8.0] - 2025-01-08
 - Integrating Spica changes into the framework:
 	- REWA+DCDT multi-transfers are now possible:
 		- changed the handling of call values: REWA is treated almost the same as an DCDT in `all_transfers` and `multi_rewa_or_dcdt`, old DCDT methods are given some protection against unexpected scenarios
@@ -41,12 +56,13 @@ They are:
 		- support in the Rust VM.
 	- New built-in functions in the `DCDTSystemSCProxy`: `DCDTModifyRoyalties`, `SDTSetNewURIs`, `DCDTModifyCreator`, `DCDTMetaDataRecreate`, `DCDTMetaDataUpdate`.
 - Interactor support for "set state" on the chain simulator.
+- Fixed ownership for ManagedVec iterators, specifically reference iterators only produce references to the items.
 - Syntax cleanup:
 	- `#[payable]` now allowed instead of `#[payable("*")]`;
 	- `register_promise` allows callback, without calling a function on destination.
 - Refactoring and optimizations:
 	- Simplified the callback selector;
-	- Improvements in ManagedVec iterators;
+	- Performance improvements in ManagedVec iterators;
 	- Removed some unnecessary bound checks in `multi_dcdt`.
 
 ## [sc 0.54.6] - 2024-12-04
@@ -132,7 +148,7 @@ They are:
   - Allow signature to be empty in TransactionOnNetwork;
   - Allow return data to be empty in VMOutputApi.
 
-## [sc 0.53.0 codec 0.21.0, vm 0.10.0, sdk 0.6.0, scenario-format 0.0.1] - 2024-09-04
+## [sc 0.53.0 codec 0.21.0, vm 0.10.0, sdk 0.6.0, scenario-format 1.17.2] - 2024-09-04
 - Unified syntax:
   -  Whitebox testing;
   -  Proxy fix for ManagedOption;
@@ -297,7 +313,7 @@ First pre-release of the unified syntax. Syntax not yet stabilized, should only 
 - Support for reading from another contract for the following storage mappers: `AddressToIdMapper`, `BiDiMapper`, `LinkedListMapper`, `SetMapper`, `SingleValueMapper`, `UniqueIdMapper`, `UnorderedSetMapper`, `UserMapper`, `VecMapper`, `WhitelistMapper`.
 - Additional methods to access data nodes directly in the `SetMapper` and `QueueMapper`.
 
-## [sc 0.47.2, codec 0.18.6, vm 0.8.2, scenario-format 0.22.2] - 2024-02-02
+## [sc 0.47.2, codec 0.18.6, vm 1.17.2, scenario-format 0.22.2] - 2024-02-02
 - Scenario testing infrastructure:
 	- The Rust VM can generate mock addresses, if not specified in advance.
 	- The `sc:` syntax now generates addresses with VM type 0x0500, same as the latest version of drt-go-scenario.
@@ -311,7 +327,7 @@ First pre-release of the unified syntax. Syntax not yet stabilized, should only 
 - Support for `drtsc:` syntax in scenarios.
 - Updated dependencies.
 
-## [sc 0.47.0, codec 0.18.4, vm 0.0.1, scenario-format 0.22.0] - 2024-01-23
+## [sc 0.47.0, codec 0.18.4, vm 0.8.0, scenario-format 0.22.0] - 2024-01-23
 - Added support for the code metadata in the Rust VM and Rust scenarios backend.
 - `sc-meta`:
 	- New `drt-go-scenario` installer;
@@ -517,7 +533,7 @@ First pre-release of the unified syntax. Syntax not yet stabilized, should only 
 - Updated readme files.
 
 ## [sc 0.39.0, codec 0.17.0, vm 0.1.0, scenario-format 0.19.0, sdk 0.1.0] - 2023-01-12
-- All crates were renamed, in line with the Dharitri brand.
+- All crates were renamed, in line with the DharitrI brand.
 - New crate: `dharitri-chain-vm`, extracted from the old debug crate.
 - New crate: `dharitri-sdk`, adapted from a solution proposed by the community.
 - A `ScenarioWorld` facade, for contract tests.
@@ -627,7 +643,7 @@ First pre-release of the unified syntax. Syntax not yet stabilized, should only 
 - New standard module: `StakingModule`.
 
 
-## [numbat-wasm 0.31.1, denali 0.13.1] - 2022-05-04
+## [numbat-wasm 0.31.1, denali 1.17.2] - 2022-05-04
 - Bugfix - formatter single char issue.
 
 ## [numbat-wasm 0.31.0, numbat-codec 0.11.0, denali 0.13.0] - 2022-05-02
@@ -734,7 +750,7 @@ First pre-release of the unified syntax. Syntax not yet stabilized, should only 
 - `ArrayVec` serialization
 - `ManagedAddress` additional conversions
 
-## [numbat-wasm 0.0.1] - 2021-11-23
+## [numbat-wasm 1.17.2] - 2021-11-23
 - Static access to API. Static thread-local context stack in the debugger.
 
 ## [numbat-wasm 0.22.11] - 2021-11-17
@@ -748,7 +764,7 @@ First pre-release of the unified syntax. Syntax not yet stabilized, should only 
 - `ManagedVarArgsEager` implementation
 - `DcdtLocalRoleFlags`, no heap allocation in `get_dcdt_local_roles`
 
-## [numbat-wasm 0.22.8, numbat-codec 0.8.2] - 2021-11-12
+## [numbat-wasm 0.22.8, numbat-codec 1.17.2] - 2021-11-12
 - Optimized decode unsigned number from slice
 
 ## [numbat-wasm 0.22.7] - 2021-11-12
@@ -785,7 +801,7 @@ First pre-release of the unified syntax. Syntax not yet stabilized, should only 
 - Contract `meta` crates are now capable of building the respective contracts and the ABIs without relying on `drtpy`.
 - Renamed feature `andes-tests` to `denali-go-tests`
 
-## [numbat-wasm 0.0.1] - 2021-10-26
+## [numbat-wasm 1.17.2] - 2021-10-26
 - Bugfix regarding contract upgrade args in `numbat-wasm-debug`
 
 ## [numbat-wasm 0.21.1, numbat-codec 0.8.1, denali 0.11.1] - 2021-10-26
@@ -796,7 +812,7 @@ First pre-release of the unified syntax. Syntax not yet stabilized, should only 
 - Debugger builtin function mocks check for DCDT roles
 - ABI provides definitions for DcdtTokenPayment, DcdtTokenData, DcdtTokenType
 
-## [numbat-wasm 0.21.0, numbat-codec 0.0.1, denali 0.11.0] - 2021-10-22
+## [numbat-wasm 0.21.0, numbat-codec 0.8.0, denali 0.11.0] - 2021-10-22
 - Denali support for NFT syntax. Many more small improvements and some major refactoring.
 - Major refactoring of the `numbat-wasm-debug` crate, which enables the debugger and the coverage tool. Many features added:
 	- support for synchronous calls, also nested synchronous calls
@@ -858,7 +874,7 @@ First pre-release of the unified syntax. Syntax not yet stabilized, should only 
 ## [numbat-wasm 0.18.1] - 2021-08-05
 - Added "safe" storage mappers, which serialize keys using nested encoding instead of top. The old respective mappers only kept for backwards compatibility, are now deprecated.
 
-## [numbat-wasm 0.18.0, denali 0.0.1] - 2021-07-28
+## [numbat-wasm 0.18.0, denali 0.8.0] - 2021-07-28
 
 - New math hooks exposed from Andes:
 	- `pow`, `log2`, `sqrt`
@@ -1064,9 +1080,9 @@ First pre-release of the unified syntax. Syntax not yet stabilized, should only 
 ## [numbat-wasm 0.9.0, numbat-codec 0.3.0, denali 0.2.0] - 2020-11-04
 - Serialization completely refactored to use "fast exit" methods
 - Storage/argument/result traits completely redesigned, simplified and optimized
-- Completely ditched the approach from numbat-wasm 0.0.1.
+- Completely ditched the approach from numbat-wasm 0.8.0.
 
-## [numbat-wasm 0.0.1, numbat-codec 0.2.0] - 2020-11-02
+## [numbat-wasm 0.8.0, numbat-codec 0.2.0] - 2020-11-02
 - Was the first version to split Encode/Decode into TopEncode/NestedEncode/TopDecode/NestedDecode
 - Attempted to optimize the serializer to use "fast exit" closures. It worked, but the resulting bytecode size was not satisfactory. Even though it was completely replaced and never got to be used, it historically remains the solution of this release.
 - Some of the storage/argument/result trait refactorings, survived.

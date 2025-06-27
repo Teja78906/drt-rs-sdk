@@ -10,7 +10,7 @@ name = "drtpy-snippet-generator"
 path = "src/drtpy_snippet_generator.rs"
 
 [dependencies.dharitri-sc]
-version = "1.0.1"
+version = "1.17.2"
 path = "../../framework/base"
 
 [dependencies]

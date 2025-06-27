@@ -9,7 +9,7 @@ use dharitri_sc_meta_lib::cli::{CliArgsToRaw, ContractCliAction};
     version,
     about,
     after_help = "
-The Dharitri smart contract Meta crate can be used in two ways:
+The DharitrI smart contract Meta crate can be used in two ways:
     A. Import it into a contract's specific meta-crate. 
         There it will receive access to the contract ABI generator. 
         Based on that it is able to build the contract and apply various tools.
@@ -420,7 +420,7 @@ pub enum InstallCommand {
     All,
 
     #[command(about = "Installs the `drt-go-scenario` tool")]
-    DrtScenarioGo(InstallDrtScenarioGoArgs),
+    DrtGoScenario(InstallDrtGoScenarioArgs),
 
     #[command(name = "wasm32", about = "Installs the `wasm32` target")]
     Wasm32(InstallWasm32Args),
@@ -433,7 +433,7 @@ pub enum InstallCommand {
 }
 
 #[derive(Default, Clone, PartialEq, Eq, Debug, Args)]
-pub struct InstallDrtScenarioGoArgs {
+pub struct InstallDrtGoScenarioArgs {
     /// The framework version on which the contracts should be created.
     #[arg(long, verbatim_doc_comment)]
     pub tag: Option<String>,

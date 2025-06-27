@@ -31,7 +31,7 @@
 #
 # 6. Make sure that the contract upgrade tool is still sound.
 # At the very least add the new version to `VERSIONS` and change `DEFAULT_LAST_VERSION` in 
-# `/home/andreim/dharitri/rs/drt-rs-sdk/framework/meta/src/sc_upgrade/upgrade_versions.rs`+
+# `/home/andreim/TerraDharitri/rs/drt-rs-sdk/framework/meta/src/sc_upgrade/upgrade_versions.rs`+
 # 
 # 7. Run this script, `./publish.sh`.
 # You can comment out the crates you are not publishing. The script will stop otherwise when it cannot publish them.
@@ -51,7 +51,7 @@
 #
 # 11. Run `sc-meta all update`. This will update the `Cargo.lock` files.
 #
-# 12. Create pull request on GitHub. The faster it gets merged in master, the better.
+# 12. Create pull request on GitHub. The faster it gets merged in main, the better.
 #
 # 13. (optional) Test the new framework on one of the contracts that are not in the same repo, e.g. DNS, DEX, etc.
 #
@@ -61,73 +61,73 @@
 #
 
 cd data/codec-derive
-cargo publish || return 1
+cargo publish --allow-dirty || return 1
 cd ../..
 
 cd data/codec
-cargo publish || return 1
+cargo publish --allow-dirty || return 1
 cd ../..
 
 cd chain/core
-cargo publish || return 1
+cargo publish --allow-dirty || return 1
 cd ../..
 
 cd chain/vm
-cargo publish || return 1
+cargo publish --allow-dirty || return 1
 cd ../..
 
 cd sdk/core
-cargo publish || return 1
+cargo publish --allow-dirty || return 1
 cd ../..
 
 cd sdk/http
-cargo publish || return 1
+cargo publish --allow-dirty || return 1
 cd ../..
 
 cd sdk/dapp
-cargo publish || return 1
+cargo publish --allow-dirty || return 1
 cd ../..
 
 cd sdk/scenario-format/
-cargo publish || return 1
+cargo publish --allow-dirty || return 1
 cd ../..
 
 cd framework/derive
-cargo publish || return 1
+cargo publish --allow-dirty || return 1
 cd ../..
 
 cd framework/base
-cargo publish || return 1
+cargo publish --allow-dirty || return 1
 cd ../..
 
 cd framework/meta-lib
-cargo publish || return 1
+cargo publish --allow-dirty || return 1
 cd ../..
 
 cd framework/scenario
-cargo publish || return 1
+cargo publish --allow-dirty || return 1
 cd ../..
 
 cd framework/snippets
-cargo publish || return 1
+cargo publish --allow-dirty || return 1
 cd ../..
 
 cd framework/meta
-cargo publish || return 1
+cargo publish --allow-dirty || return 1
 cd ../..
 
 cd framework/wasm-adapter
-cargo publish || return 1
+cargo publish --allow-dirty || return 1
 cd ../..
 
 cd contracts/modules
-cargo publish || return 1
+cargo publish --allow-dirty || return 1
 cd ../..
 
 cd contracts/core/price-aggregator
-cargo publish || return 1
+cargo publish --allow-dirty || return 1
 cd ../../..
 
 cd contracts/core/wrewa-swap
-cargo publish || return 1
+cargo publish --allow-dirty || return 1
 cd ../../..

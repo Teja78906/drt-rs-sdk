@@ -1,6 +1,6 @@
 # NFTs owning NFTs
 
-Currently Dharitri has a set of built in functions for NFTs: token manager, create, burn, update, mint. It implements transfer and execute, multi transfer. Smart contracts can own NFTs, they can create new NFTs, can update attributes, update URIs.
+Currently DharitrI has a set of built in functions for NFTs: token manager, create, burn, update, mint. It implements transfer and execute, multi transfer. Smart contracts can own NFTs, they can create new NFTs, can update attributes, update URIs.
 
 Equipping. Our goal is to be able to equip NFTs with other NFTs, enabling ownership, attribute updates and some extra features. This can be done through a new SC standard - we will find some name for it - for now let’s call it MergeNFT.  The basic contract should be as simple as possible, as it is a small standard. On top of that, developers and the market can create multiple usecases. So in the first place we will focus on building the MINIMUM VIABLE SMART CONTRACT to enable the NFTs owning NFTs feature.
 

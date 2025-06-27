@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
   workflow_dispatch:
 
@@ -14,12 +14,12 @@ permissions:
 jobs:
   contracts:
     name: Contracts (nightly)
-    uses: TerraDharitri/drt-sc-actions/.github/workflows/contracts.yml@67a09c1737e95f0d85a200c38101b40aae9173c2
+    uses: TerraDharitri/drt-sc-actions/.github/workflows/contracts.yml@v0.1.19
     with:
       rust-toolchain: nightly-2024-05-22
       path-to-sc-meta: framework/meta
       enable-contracts-size-report: false
-      drt-go-scenario-version: v3.0.0
+      drt-go-scenario-version: v0.0.2-4
       coverage-args: --ignore-filename-regex='meta/src' --ignore-filename-regex='wasm-adapter' --ignore-filename-regex='benchmarks/' --ignore-filename-regex='tests/' --output ./coverage.md
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}

@@ -21,11 +21,11 @@ plotters-canvas = "^0.3.0"
 lto = true
 
 [dependencies.dharitri-sc]
-version = "1.0.1"
+version = "=1.17.2"
 path = "../../framework/base"
 
 [dependencies.dharitri-sc-scenario]
-version = "=1.0.1"
+version = "=1.17.2"
 path = "../../framework/scenario"
 default-features = false
 

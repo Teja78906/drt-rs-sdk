@@ -94,7 +94,7 @@ where
     ///
     /// For raw handling, `.rewa_direct_non_strict()` is also acceptable.
     #[deprecated(
-        since = "0.0.1",
+        since = "0.55.0",
         note = "Does not cover multi-transfer scenarios properly, but left for backwards compatibility. Please use .rewa() instead!"
     )]
     pub fn rewa_value(&self) -> ManagedRef<'static, A, BigUint<A>> {

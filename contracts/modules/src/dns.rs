@@ -4,7 +4,7 @@ dharitri_sc::imports!();
 
 /// Standard smart contract module that deals with registering usernames in a DNS contract.
 ///
-/// Dharitri usernames/herotags need to be requested by the beneficiary.
+/// DharitrI usernames/herotags need to be requested by the beneficiary.
 /// For a contract, this means that they need an endpoint via which to request a username from the DNS.
 ///
 #[dharitri_sc::module]

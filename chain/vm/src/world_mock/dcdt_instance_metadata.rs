@@ -1,6 +1,6 @@
 use crate::types::VMAddress;
 
-/// Holds the data for a Dharitri standard digital token transaction
+/// Holds the data for a DharitrI standard digital token transaction
 #[derive(Clone, Default, Debug)]
 pub struct DcdtInstanceMetadata {
     pub name: Vec<u8>,

@@ -1,4 +1,4 @@
-# Dharitri blockchain transaction scenarios
+# DharitrI blockchain transaction scenarios
 
 [![Crates.io](https://img.shields.io/crates/v/dharitri-chain-scenario-format)](https://crates.io/crates/dharitri-chain-scenario-format)
 

@@ -9,13 +9,13 @@ publish = false
 path = "src/lib.rs"
 
 [dependencies.dharitri-sc]
-version = "1.0.1"
+version = "1.17.2"
 path = "../../../framework/base"
 
 [dependencies.dharitri-sc-modules]
-version = "1.0.1"
+version = "1.17.2"
 path = "../../../contracts/modules"
 
 [dev-dependencies.dharitri-sc-scenario]
-version = "1.0.1"
+version = "1.17.2"
 path = "../../../framework/scenario"
