@@ -11,7 +11,7 @@ use super::system_info::{get_system_info, SystemInfo};
 
 const USER_AGENT: &str = "dharitri-sc-meta";
 const SCENARIO_CLI_RELEASES_BASE_URL: &str =
-    "https://api.github.com/repos/teja78906/drt-go-chain-scenario-cli/releases";
+    "https://api.github.com/repos/TerraDharitri/drt-go-chain-scenario-cli/releases";
 const CARGO_HOME: &str = env!("CARGO_HOME");
 
 #[derive(Clone, Debug)]
