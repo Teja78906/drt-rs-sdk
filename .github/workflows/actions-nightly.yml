@@ -19,7 +19,7 @@ jobs:
       rust-toolchain: nightly
       path-to-sc-meta: framework/meta
       enable-contracts-size-report: false
-      drt-go-scenario-version: v0.0.2-4
+      drt-go-scenario-version: v0.0.2
       coverage-args: --ignore-filename-regex='meta/src' --ignore-filename-regex='wasm-adapter' --ignore-filename-regex='benchmarks/' --ignore-filename-regex='tests/' --output ./coverage.md
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
